@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings — Q/2025</title>
+
+  <!-- Reveal.js from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css" id="theme">
+
+  <!-- Highlight.js for code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+
+  <!-- Optional: math plugin (MathJax) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+
+  <style>
+    /* Small, clean styling for corporate look */
+    .reveal .slides section { font-family: "Inter", "Helvetica Neue", Arial, sans-serif; }
+    .email { font-size: 0.9rem; opacity: 0.9; }
+    pre code { font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide -->
+      <section>
+        <h1>Quarterly Earnings Report — Q/2025</h1>
+        <p class="email">Contact: 23f1002293@ds.study.iitm.ac.in</p>
+        <p>Technical consultant presentation demonstrating modern Reveal.js features.</p>
+        <aside class="notes">
+          Welcome stakeholders; quick intro. Mention the availability of the full notebook and code in the repository.
+        </aside>
+      </section>
+
+      <!-- Markdown slide (uses data-markdown) -->
+      <section data-markdown>
+        <script type="text/template">
+
+## Executive Summary
+
+- Revenue grew **6.2%** vs prior quarter.
+- Net margin expansion driven by cost optimization and product mix.
+
+**Key actions:**
+1. Accelerate high-margin digital offerings.  
+2. Tighten working capital management.  
+3. Prioritize investment in automation.
+
+Contact for follow-up: **23f1002293@ds.study.iitm.ac.in**
+
+        </script>
+        <aside class="notes">
+          Walk through the 2-3 headline bullets. Use the next slide for charts.
+        </aside>
+      </section>
+
+      <!-- Animated fragments slide -->
+      <section>
+        <h2>Drivers of Growth</h2>
+        <ul>
+          <li class="fragment">Increased subscription revenue (new customers + upsells)</li>
+          <li class="fragment">Improved collections & reduced DSO</li>
+          <li class="fragment">Cost discipline in operations</li>
+        </ul>
+        <aside class="notes">
+          Use fragments to reveal each driver one-by-one; pause for questions after each.
+        </aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Reproducible Financial Calculation (Python)</h2>
+        <pre><code class="language-python"># Simple revenue growth calculation
+prev_q_revenue = 34_500_000  # previous quarter
+curr_q_revenue = 36_650_000  # current quarter
+
+growth_rate = (curr_q_revenue - prev_q_revenue) / prev_q_revenue
+print(f"Quarter-over-quarter growth: {growth_rate:.4%}")
+</code></pre>
+        <aside class="notes">
+          Highlight that this snippet is included in the repo; use CI to run checks on financial preprocessing.
+        </aside>
+      </section>
+
+      <!-- Mathematical equations -->
+      <section>
+        <h2>Key Financial Formulas</h2>
+        <p>Gross Margin: </p>
+        <p class="fragment">\(\text{Gross Margin} = \dfrac{\text{Revenue} - \text{COGS}}{\text{Revenue}}\)</p>
+        <p class="fragment">EBITDA Margin: \(\dfrac{\text{EBITDA}}{\text{Revenue}}\)</p>
+        <p class="fragment">Discounted Cash Flow (perpetuity): \(V = \dfrac{FCF_{1}}{r - g}\)</p>
+        <aside class="notes">
+          Explain each formula and show numbers in an appendix if asked. Math rendered with MathJax plugin.
+        </aside>
+      </section>
+
+      <!-- Slide with plot placeholder (could be replaced with embedded image) -->
+      <section>
+        <h2>Revenue Trend (YoY)</h2>
+        <p class="fragment">[Insert chart image or embed interactive chart here — saved in /assets]</p>
+        <aside class="notes">
+          During the in-person talk, switch to full-screen chart and discuss variance drivers.
+        </aside>
+      </section>
+
+      <!-- Appendix / Publishing info -->
+      <section>
+        <h2>Appendix & Publishing</h2>
+        <ol>
+          <li class="fragment">This presentation is built with Reveal.js and Highlight.js for syntax highlighting.</li>
+          <li class="fragment">To publish: push this `index.html` to your GitHub repository and enable GitHub Pages.</li>
+          <li class="fragment">Repository includes `/assets` for charts and `/docs` if you prefer to use the docs folder.</li>
+        </ol>
+        <aside class="notes">
+          Walk through GitHub Pages publishing steps if stakeholders need help.
+        </aside>
+      </section>
+
+      <!-- Contact / End -->
+      <section>
+        <h2>Thank you</h2>
+        <p>Questions? Reach out: <strong>23f1002293@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">
+          Offer to share the repo link and provide a short demo of the repo structure.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <!-- Highlight.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+  <script>
+    // Initialize Reveal
+    const deck = new Reveal({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.MathJax2 ]
+    });
+    deck.initialize();
+
+    // Auto-highlight code blocks after initialization
+    document.querySelectorAll('pre code').forEach((el) =&gt; { hljs.highlightElement(el); });
+  </script>
+</body>
+</html>
